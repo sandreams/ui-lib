@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="/common/reset.css" />
+    <link rel="stylesheet" href="/common/style.css" />
+    <link rel="stylesheet" href="../src/css/loginform.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn">Login</button>
+      <p>是只能在类的内部访问的方法和属性</p>
+      <p>是只能在类的内部访问的方法和属性</p>
+      <p>外部不能访问</p>
+      <p>这是常见需求</p>
+      <p>有利于代码的封装</p>
+      <p>但 ES6 不提供，只能通过变通方法模拟实现</p>
+      <p>一种做法是在命名上加以区别</p>
+      <p>上面代码中，_bar()方法前面的下划线，</p>
+      <p>表示这是一个只限于内部使用的私有方法。</p>
+      <p>但是，这种命名是不保险的，在类的外部，还是可以调用到这个方法。</p>
+      <p>私有方法和私有属性</p>
+      <p>
+        另一种方法就是索性将私有方法移出类，因为类内部的所有方法都是对外可见的。
+      </p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+      <p>有利于代码的封装</p>
+    </div>
+    <div id="login-modal" style="display: none" class="login-modal">
+      <div class="dialog">
+        <div class="dialog-header">
+          <div class="close-btn">
+            <a class="close" href="">✖</a>
+          </div>
+          <div class="img-wrap">
+            <img src="../src/img/avatar.png" alt="" />
+          </div>
+        </div>
+        <form class="form-group" action="">
+          <div class="form-item">
+            <label for="uname"> <b>Username</b> </label>
+            <input type="text" id="uname" placeholder="Enter Username" />
+          </div>
+          <div class="form-item">
+            <label for="pwd"> <b>Password</b> </label>
+            <input type="password" id="pwd" placeholder="Enter Password" />
+          </div>
+          <button class="form-submit">Login</button>
+
+          <label for="remember"
+            ><input type="checkbox" name="remember" id="remember" />Remember
+            me</label
+          >
+        </form>
+        <div class="action-bar">
+          <button class="btn-cancel close">Cancel</button>
+          <span>Forgot </span><a href="">password?</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../src/js/loginform.js"></script>
+  </body>
+</html>
