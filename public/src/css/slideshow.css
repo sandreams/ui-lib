@@ -1,0 +1,69 @@
+.img-wrap {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 1000px;
+}
+.container-fade .img-wrap > img {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.container-fade .slide-index {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 8px 12px;
+  color: #fff;
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.container-slide .img-wrap > img {
+  transition: margin 0.7s;
+}
+.slide {
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+}
+.slide {
+  font-size: 1.5em;
+}
+.slide.slide--pre {
+  left: 0;
+}
+.slide.slide--next {
+  right: 0;
+}
+.slide:hover {
+  background: #000;
+  opacity: 0.2;
+}
+.slide-panel {
+  text-align: center;
+  padding: 20px;
+}
+.slide-panel > a {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.7s ease-in;
+}
+.slide-panel > a.active {
+  background-color: #717171;
+}
+.slide-panel > a:hover {
+  background-color: #717171;
+}
