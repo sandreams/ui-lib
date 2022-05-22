@@ -6,7 +6,7 @@
     },
     init() {
       this.render()
-      this.data.$rootElement.on('click', (e) => {
+      this.data.$rootElement.on('click', 'input', (e) => {
         e.stopPropagation()
         const $ck = this.data.$rootElement.find('input[type="checkbox"]')
         this.data.isActive = $ck.get(0).checked
