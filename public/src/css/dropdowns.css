@@ -27,6 +27,16 @@
 .dropdown.dropdown-align--right .dropdown-list {
   right: 0;
 }
+.dropdown.dropdown-align--middle .dropdown-list {
+  width: 150px;
+  overflow: hidden;
+  left: calc(50% - 75px);
+}
+.dropdown.dropdown-align--middle li {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 .dropdown:hover > .dropdown-list {
   display: block;
 }
