@@ -15,6 +15,7 @@
         <button onclick="showLeft()">Show Left</button>
         <button onclick="showRight()">Show Right</button>
         <button onclick="showModal()">Show Modal</button>
+        <button onclick="showTop()">Show Top</button>
       </div>
       <div class="place">
         <p>
@@ -64,56 +65,88 @@
         <p>evertitur eum. Affert laboramus repudiandae nec et. Inciderint</p>
         <p>efficiantur his ad. Eum no molestiae voluptatibus.</p>
       </div>
-      <div class="side-nav side-nav--left">
-        <div class="nav-modal" onclick=""></div>
-        <div class="nav-close-wrap">
-          <a class="nav-close" href="#">✖</a>
+      <div id="left1" class="side-nav side-nav--left">
+        <!-- 这里的 id=left1、id=left2 仅用于区分两个 side-nav--left的侧边栏，正常使用仍用类名 .side-nav--left 做选择器 -->
+        <div class="modal-box"></div>
+        <div class="side-nav-content">
+          <div class="nav-close-wrap">
+            <a class="nav-close" href="#">✖</a>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item">
+              <a href="#">Services</a>
+            </li>
+            <li class="nav-item"><a href="#">Clients</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+          </ul>
         </div>
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#">About</a></li>
-          <li class="nav-item">
-            <a href="#">Services</a>
-          </li>
-          <li class="nav-item"><a href="#">Clients</a></li>
-          <li class="nav-item"><a href="#">Contact</a></li>
-        </ul>
       </div>
       <div class="side-nav side-nav--right">
-        <div class="nav-modal" onclick=""></div>
-        <div class="nav-close-wrap">
-          <a class="nav-close" href="#">✖</a>
+        <div class="modal-box"></div>
+        <div class="side-nav-content">
+          <div class="nav-close-wrap">
+            <a class="nav-close" href="#">✖</a>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item">
+              <a href="#">Services</a>
+            </li>
+            <li class="nav-item"><a href="#">Clients</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+          </ul>
         </div>
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#">About</a></li>
-          <li class="nav-item"><a href="#">Services</a></li>
-          <li class="nav-item"><a href="#">Clients</a></li>
-          <li class="nav-item"><a href="#">Contact</a></li>
-        </ul>
       </div>
-      <div class="side-nav side-nav--right side-nav__modal">
-        <div class="nav-modal" onclick=""></div>
-        <div class="nav-close-wrap">
-          <a class="nav-close" href="#">✖</a>
+      <div id="left2" class="side-nav side-nav--left side-nav__modal">
+        <div class="modal-box"></div>
+        <div class="side-nav-content">
+          <div class="nav-close-wrap">
+            <a class="nav-close" href="#">✖</a>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item">
+              <a href="#">Services</a>
+            </li>
+            <li class="nav-item"><a href="#">Clients</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+          </ul>
         </div>
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#">About</a></li>
-          <li class="nav-item"><a href="#">Services</a></li>
-          <li class="nav-item"><a href="#">Clients</a></li>
-          <li class="nav-item"><a href="#">Contact</a></li>
-        </ul>
+      </div>
+      <div class="side-nav side-nav--top">
+        <div class="modal-box"></div>
+        <div class="side-nav-content">
+          <div class="nav-close-wrap">
+            <a class="nav-close" href="#">✖</a>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#">About</a></li>
+            <li class="nav-item">
+              <a href="#">Services</a>
+            </li>
+            <li class="nav-item"><a href="#">Clients</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
     <script src="../src/js/sidenavigation.js"></script>
     <script>
       const showLeft = () => {
-        $('.side-nav--left').addClass('on-view')
+        // $('.side-nav--left').addClass('on-view')
+        $('#left1').addClass('on-view')
       }
       const showRight = () => {
         $('.side-nav--right').addClass('on-view')
       }
       const showModal = () => {
-        $('.side-nav.side-nav__modal').addClass('on-view')
+        // $('.side-nav.side-nav__modal').addClass('on-view')
+        $('#left2').addClass('on-view')
+      }
+      const showTop = () => {
+        $('.side-nav--top').addClass('on-view')
       }
     </script>
   </body>

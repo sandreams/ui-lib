@@ -12,38 +12,63 @@
   padding: 40px;
   margin: 100px 0;
 }
-.side-nav {
+.side-nav .side-nav-content {
   position: fixed;
-  width: 0;
   background: #111111;
   color: #818181;
   overflow: hidden;
-  transition: width ease-out 0.4s;
+  transition: all ease-out 0.4s;
+  /* transition: height ease-out 0.4s; */
   z-index: 10;
 }
-.side-nav.side-nav__modal.on-view .nav-modal {
-  position: fixed;
-  min-width: 100vw;
+.side-nav.side-nav--left.on-view .side-nav-content {
+  width: 250px !important;
+}
+.side-nav.side-nav--right.on-view .side-nav-content {
+  width: 250px !important;
+}
+.side-nav.side-nav--top.on-view .side-nav-content {
+  height: 60px !important;
+}
+.side-nav.side-nav--left .side-nav-content {
+  left: 0;
+  top: 0;
+  width: 0;
   min-height: 100vh;
-  z-index: 9;
-  opacity: 0.8;
-  background: #474747;
 }
-.side-nav.on-view {
-  width: 250px;
+.side-nav.side-nav--right .side-nav-content {
+  right: 0;
+  top: 0;
+  width: 0;
+  min-height: 100vh;
 }
-.side-nav a {
-  color: #818181;
-  font-size: 24px;
+.side-nav.side-nav--top .side-nav-content {
+  right: 0;
+  top: 0;
+  height: 0;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
 }
 .side-nav .nav-close-wrap {
   padding: 20px;
+}
+.side-nav.side-nav--top .nav-close-wrap {
+  padding: 0 20px;
+  margin-left: 20px;
 }
 .side-nav.side-nav--left .nav-close-wrap {
   text-align: right;
 }
 .side-nav.side-nav--right .nav-close-wrap {
   text-align: left;
+}
+.side-nav.side-nav--top .nav-close-wrap {
+  text-align: left;
+}
+.side-nav a {
+  color: #818181;
+  font-size: 24px;
 }
 .nav-list .nav-item {
   padding: 12px 20px;
@@ -53,6 +78,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.side-nav.side-nav--top .nav-item {
+  max-width: 200px;
+}
 .nav-list .nav-item:hover {
   background: #cccccc;
   color: #333;
@@ -60,13 +88,20 @@
 .nav-list .nav-item:hover a {
   color: #333;
 }
-.side-nav.side-nav--left {
+.side-nav.side-nav--top .nav-list {
+  display: flex;
+  align-items: center;
+}
+.side-nav .modal-box {
+  position: fixed;
   left: 0;
   top: 0;
+  display: none;
+  min-width: 100vw;
   min-height: 100vh;
+  background-color: rgba(17, 17, 17, 0.3);
+  z-index: 9;
 }
-.side-nav.side-nav--right {
-  right: 0;
-  top: 0;
-  min-height: 100vh;
+.side-nav.side-nav__modal.on-view .modal-box {
+  display: block;
 }
