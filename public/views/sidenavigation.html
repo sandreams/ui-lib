@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>轮播图</title>
+    <link rel="stylesheet" href="/common/reset.css" />
+    <link rel="stylesheet" href="/common/style.css" />
+    <link rel="stylesheet" href="../src/css/sidenavigation.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="btn-group">
+        <button onclick="showLeft()">Show Left</button>
+        <button onclick="showRight()">Show Right</button>
+        <button onclick="showModal()">Show Modal</button>
+      </div>
+      <div class="place">
+        <p>
+          Full Sidebar This sidebar is of full height (100%) and always shown.
+        </p>
+        <p>Scroll this window to see the "fixed" effect. Some text to enable</p>
+        <p>
+          scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
+        </p>
+        <p>
+          maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
+        </p>
+        <p>gloriatur ius te, id agam omnis evertitur eum. Affert laboramus</p>
+        <p>
+          repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+        </p>
+        <p>
+          voluptatibus. Some text to enable scrolling.. Lorem ipsum dolor sit
+        </p>
+        <p>amet, illum definitiones no quo, maluisset concludaturque et eum,</p>
+        <p>
+          altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
+        </p>
+        <p>evertitur eum. Affert laboramus repudiandae nec et. Inciderint</p>
+        <p>efficiantur his ad. Eum no molestiae voluptatibus.</p>
+        <p>
+          Full Sidebar This sidebar is of full height (100%) and always shown.
+        </p>
+        <p>Scroll this window to see the "fixed" effect. Some text to enable</p>
+        <p>
+          scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo,
+        </p>
+        <p>
+          maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae
+        </p>
+        <p>gloriatur ius te, id agam omnis evertitur eum. Affert laboramus</p>
+        <p>
+          repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae
+        </p>
+        <p>
+          voluptatibus. Some text to enable scrolling.. Lorem ipsum dolor sit
+        </p>
+        <p>amet, illum definitiones no quo, maluisset concludaturque et eum,</p>
+        <p>
+          altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis
+        </p>
+        <p>evertitur eum. Affert laboramus repudiandae nec et. Inciderint</p>
+        <p>efficiantur his ad. Eum no molestiae voluptatibus.</p>
+      </div>
+      <div class="side-nav side-nav--left">
+        <div class="nav-modal" onclick=""></div>
+        <div class="nav-close-wrap">
+          <a class="nav-close" href="#">✖</a>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item">
+            <a href="#">Services</a>
+          </li>
+          <li class="nav-item"><a href="#">Clients</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="side-nav side-nav--right">
+        <div class="nav-modal" onclick=""></div>
+        <div class="nav-close-wrap">
+          <a class="nav-close" href="#">✖</a>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item"><a href="#">Services</a></li>
+          <li class="nav-item"><a href="#">Clients</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="side-nav side-nav--right side-nav__modal">
+        <div class="nav-modal" onclick=""></div>
+        <div class="nav-close-wrap">
+          <a class="nav-close" href="#">✖</a>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">About</a></li>
+          <li class="nav-item"><a href="#">Services</a></li>
+          <li class="nav-item"><a href="#">Clients</a></li>
+          <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../src/js/sidenavigation.js"></script>
+    <script>
+      const showLeft = () => {
+        $('.side-nav--left').addClass('on-view')
+      }
+      const showRight = () => {
+        $('.side-nav--right').addClass('on-view')
+      }
+      const showModal = () => {
+        $('.side-nav.side-nav__modal').addClass('on-view')
+      }
+    </script>
+  </body>
+</html>

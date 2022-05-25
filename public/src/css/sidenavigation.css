@@ -1,0 +1,72 @@
+.container button {
+  font-size: 16px;
+  color: #fff;
+  padding: 12px;
+  background: #000;
+  margin-right: 30px;
+}
+.place {
+  max-width: 360px;
+}
+.place p {
+  padding: 40px;
+  margin: 100px 0;
+}
+.side-nav {
+  position: fixed;
+  width: 0;
+  background: #111111;
+  color: #818181;
+  overflow: hidden;
+  transition: width ease-out 0.4s;
+  z-index: 10;
+}
+.side-nav.side-nav__modal.on-view .nav-modal {
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 9;
+  opacity: 0.8;
+  background: #474747;
+}
+.side-nav.on-view {
+  width: 250px;
+}
+.side-nav a {
+  color: #818181;
+  font-size: 24px;
+}
+.side-nav .nav-close-wrap {
+  padding: 20px;
+}
+.side-nav.side-nav--left .nav-close-wrap {
+  text-align: right;
+}
+.side-nav.side-nav--right .nav-close-wrap {
+  text-align: left;
+}
+.nav-list .nav-item {
+  padding: 12px 20px;
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.nav-list .nav-item:hover {
+  background: #cccccc;
+  color: #333;
+}
+.nav-list .nav-item:hover a {
+  color: #333;
+}
+.side-nav.side-nav--left {
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+}
+.side-nav.side-nav--right {
+  right: 0;
+  top: 0;
+  min-height: 100vh;
+}
