@@ -1,0 +1,84 @@
+.place {
+  max-width: 360px;
+}
+.place p {
+  padding: 40px;
+  margin: 100px 0;
+}
+.imgs-display {
+  margin: 20px;
+  display: flex;
+  max-width: 960px;
+  overflow-x: auto;
+}
+.imgs-display .img-col {
+  min-width: 33%;
+  margin-right: 16px;
+  cursor: pointer;
+}
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9;
+}
+.gallery-modal .modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0 20px;
+  color: #fff;
+  font-size: 30px;
+}
+.modal-content {
+  width: 70%;
+  margin: 150px auto 0 auto;
+}
+.modal-content .imgs-slides {
+  display: flex;
+  overflow-x: auto;
+}
+.imgs-slides .slide-col {
+  min-width: 34%;
+  cursor: pointer;
+}
+.slides {
+  display: none;
+  animation-name: fade;
+  animation-duration: 0.4s;
+}
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slides.on-view {
+  display: block;
+}
+.slides img {
+  width: 100%;
+}
+.controls {
+  height: 60px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+}
+.controls a {
+  padding: 0 16px;
+  color: #fff;
+}
+.controls .captain-text {
+  margin: 0 auto;
+}
