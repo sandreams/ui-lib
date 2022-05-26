@@ -29,6 +29,7 @@
         },
       ],
       currentIndex: 1,
+      $modal: $('.gallery-modal'),
     },
     setOnView(index) {
       $('.slides')
@@ -37,6 +38,13 @@
       $('.slides')
         .eq(index - 1)
         .addClass('on-view')
+      $('.captain-text').text(this.data.imgs[index - 1].name)
+      $('.imgs-slides img')
+        .eq(this.data.currentIndex - 1)
+        .removeClass('active')
+      $('.imgs-slides img')
+        .eq(index - 1)
+        .addClass('active')
       this.data.currentIndex = index
       this.scrollLeft(index)
     },
@@ -85,6 +93,20 @@
           this.onClickNext()
         }
       })
+      $('.imgs-display').on('click', '.hover-shadow', (e) => {
+        if (
+          e.target.dataset &&
+          e.target.dataset.key &&
+          /^\d+$/.test(e.target.dataset.key)
+        ) {
+          const { key } = e.target.dataset
+          this.data.$modal.addClass('popup')
+          this.setOnView(Number(key))
+        }
+      })
+      $('.modal-close').on('click', () => {
+        this.data.$modal.removeClass('popup')
+      })
     },
     init() {
       const slides_wrap = this.data.imgs.reduce((pre, cur, index) => {
@@ -102,7 +124,7 @@
         return (
           pre +
           `<div class="slide-col">
-          <img src="${cur.url}" alt="" class="hover-shadow click-handler ${
+          <img src="${cur.url}" alt="" class="hover-opacity click-handler ${
             this.data.currentIndex === index + 1 ? 'active' : ''
           }" data-key="${index + 1}" />
         </div>`
